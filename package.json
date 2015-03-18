@@ -1,10 +1,12 @@
 {
   "name": "clessc",
   "version": "0.0.1",
-  "description": "Node bindings for clessc C++ less compiler",
+  "description": "Node bindings for the clessc C++ less compiler",
   "main": "index.js",
+  "gypfile": true,
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "node-gyp configure && node-gyp build"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,13 @@
     "compile"
   ],
   "author": "Ketil Albertsen <ketil@entitet.no>",
-  "license": "MIT",
+  "license": "GPL",
   "bugs": {
     "url": "https://github.com/litek/node-clessc/issues"
   },
-  "homepage": "https://github.com/litek/node-clessc"
+  "homepage": "https://github.com/litek/node-clessc",
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "nan": "^1.7.0"
+  }
 }
